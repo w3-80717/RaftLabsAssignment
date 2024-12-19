@@ -1,11 +1,11 @@
 export default defineContentScript({
-    matches: ['*://www.linkedin.com/mynetwork/grow/'],//if this LinkedIn link is opened then it showed the 'Clicked All Connect Buttons' 
+    matches: ['*://www.linkedin.com/mynetwork/grow/'],//if this LinkedIn link is opened then it showed the 'Connect With All' 
     main() {
         let stopConnecting = false;
   
         // Create "Click All Connect Buttons" button
         const connectButton = document.createElement('button');
-        connectButton.innerText = 'Click All Connect Buttons';
+        connectButton.innerText = 'Connect With All';
         // give button styles
         connectButton.style.position = 'fixed';
         connectButton.style.top = '50px';
